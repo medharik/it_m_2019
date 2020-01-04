@@ -1,0 +1,20 @@
+LDD : LANGAGE DE DEFINTION DES DONNEES 
+create table produit(
+id number  ,
+libelle varchar2(50)  not null  ,
+prix number default 0, 
+constraint pk_produit primary key (id)
+);
+constrainte de bd : 
+primary  key  : unique + not null 
+foreign key  : cle etrangere , role : definir les relation entre tables 
+not null : champs requis 
+check : contrainte de domaine :(salaire > 10000), (ville in (casa, rabat))
+unique : valeurs uniques (y compris null) 
+
+alter table produit add   qtestock number ; 
+alter table produit drop column  qtestock;
+alter table  produit modify prix number(4) default 100;
+alter table produit add constraint  un_libelle unique(libelle);
+alter table produit drop  constraint  un_libelle 
+drop table produit
